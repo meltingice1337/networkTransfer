@@ -59,6 +59,7 @@ namespace nTransfer_Server
                 {
                     FileHandles[_fhandle].Close();
                     FileHandles[_fhandle].Dispose();
+                    FileHandles.Remove(_fhandle);
                     lock (_server)
                     {
                         if (Handle > _fhandle)
